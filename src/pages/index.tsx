@@ -6,15 +6,17 @@ import PMedium from '../foundation/typography/p-medium';
 
 const Home: NextPage = () => {
   return (
-    <Main>
-      <Ul>
-        <Li>
-          <H1Title text="Example" color="--gray6" />
-          <PMedium text="Example Text" color="--gray7" />
-          <SlidSyntaxHighlighter language="tsx" codeString={codeString} />
-        </Li>
-      </Ul>
-    </Main>
+    <>
+      <Main>
+        <Ul>
+          <Li>
+            <H1Title text="Example" color="--gray6" />
+            <PMedium text="Example Text" color="--gray7" />
+            <SlidSyntaxHighlighter language="tsx" codeString={codeString} />
+          </Li>
+        </Ul>
+      </Main>
+    </>
   );
 };
 
