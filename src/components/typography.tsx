@@ -17,34 +17,34 @@ const StaggerTypography = () => {
     >
       <LargeTitle //
         variants={smoothUp}
-        text="Large Title Inter English 34px Bold"
+        text="LargeTitle Inter English 34px Bold"
         color="--gray8"
       />
 
       <Title1
         variants={smoothUp}
-        text="Title 1 Inter English 28px Bold"
+        text="Title1 Inter English 28px Bold"
         color="--gray8"
         marginTop="36px"
       />
 
       <Title2
         variants={smoothUp}
-        text="Title 2 Inter English 22px Bold"
+        text="Title2 Inter English 22px Bold"
         color="--gray8"
         marginTop="36px"
       />
 
       <Title3
         variants={smoothUp}
-        text="Title 3 Inter English 20px Bold"
+        text="Title3 Inter English 20px Bold"
         color="--gray8"
         marginTop="36px"
       />
 
       <Body1
         variants={smoothUp}
-        text="Body 1 Inter English 17px Regular"
+        text="Body1 Inter English 17px Regular"
         color="--gray8"
         marginTop="36px"
       />

@@ -25,8 +25,6 @@ const Main = styled.main`
   display: flex;
   justify-content: center;
   margin: 72px auto 144px;
-
-  /* width: 100%; */
 `;
 
 const Ul = styled.ul`
