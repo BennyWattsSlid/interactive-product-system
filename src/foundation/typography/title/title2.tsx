@@ -37,8 +37,8 @@ const Title2 = ({
       color={color}
       weight={weight || 700}
       textSize={{
-        desktop: '22px',
-        mobile: '22px',
+        desktop: '24px',
+        mobile: '24px',
       }}
       // lineHeight={{
       //   desktop: '42px',

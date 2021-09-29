@@ -1,19 +1,30 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import {
+  buttonVariants,
+  smoothUp,
+  stagger,
+} from '../foundation/framer-motion/variants';
 import LargeTitle from '../foundation/typography/title/large-title';
-import { smoothUp, stagger } from '../foundation/framer-motion/variants';
 import Title1 from '../foundation/typography/title/title1';
 import Title2 from '../foundation/typography/title/title2';
 import Title3 from '../foundation/typography/title/title3';
 import Body1 from '../foundation/typography/body/body1';
+import { useState } from 'react';
 import { mediaBreakPoint } from '../styles/common';
 
 const StaggerTypography = () => {
+  const [animationCount, setAnimationCount] = useState(0);
+  const active = () => {
+    setAnimationCount(animationCount + 1);
+  };
+
   return (
     <StaggerFigure //
       variants={stagger}
       initial="initial"
       animate="animate"
+      key={animationCount} // 모션 반복 위해 필요
     >
       <LargeTitle //
         variants={smoothUp}
@@ -30,7 +41,7 @@ const StaggerTypography = () => {
 
       <Title2
         variants={smoothUp}
-        text="Title2 Inter English 22px Bold"
+        text="Title2 Inter English 24px Bold"
         color="--gray8"
         marginTop="36px"
       />
@@ -48,6 +59,14 @@ const StaggerTypography = () => {
         color="--gray8"
         marginTop="36px"
       />
+      <MotionButton
+        onClick={() => active()}
+        variants={buttonVariants}
+        whileHover="whileHover"
+        whileTap="whileTap"
+      >
+        <Body1 text="Animate" color="--gray1" weight={700} />
+      </MotionButton>
     </StaggerFigure>
   );
 };
@@ -59,7 +78,7 @@ const StaggerFigure = styled(motion.figure)`
   border-radius: 16px;
 
   margin: 36px 0 0;
-  padding: 56px;
+  padding: 56px 56px 36px;
   max-width: 740px;
 
   @media all and (max-width: ${mediaBreakPoint.first}) {
@@ -67,4 +86,13 @@ const StaggerFigure = styled(motion.figure)`
     padding: 36px;
     max-width: 91vw;
   }
+`;
+
+const MotionButton = styled(motion.button)`
+  background-color: var(--primary);
+  padding: 24px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 56px;
+  border-radius: 21px;
 `;

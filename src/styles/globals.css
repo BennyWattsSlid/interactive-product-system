@@ -2,8 +2,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'SlidTextStyle', -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
   background-color: var(--gray0);
 }
 
@@ -25,6 +26,20 @@ a:visited,
 a:hover,
 a:active {
   color: transparent;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  outline-style: none;
 }
 
 ul,
