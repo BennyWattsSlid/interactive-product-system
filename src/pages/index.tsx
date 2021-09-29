@@ -30,7 +30,7 @@ const Ul = styled.ul`
   flex-direction: column;
   justify-content: center;
   min-width: 640px;
-  max-width: 840px;
+  max-width: 800px;
 `;
 
 const codeString = `import styled from 'styled-components';
@@ -55,13 +55,13 @@ const StaggerTypography = () => {
   };
 
   return (
-    <StaggerFigure //
+    <StaggerFigure 
       variants={stagger}
       initial="initial"
       animate="animate"
-      key={animationCount} // 모션 반복 위해 필요
+      key={animationCount}
     >
-      <LargeTitle //
+      <LargeTitle 
         variants={smoothUp}
         text="LargeTitle Inter English 34px Bold"
         color="--gray8"
@@ -114,7 +114,7 @@ const StaggerFigure = styled(motion.figure)\`
 
   margin: 36px 0 0;
   padding: 56px 56px 36px;
-  max-width: 740px;
+  max-width: 800px;
 
   @media all and (max-width: \${mediaBreakPoint.first}) {
     margin: 36px 0 0;

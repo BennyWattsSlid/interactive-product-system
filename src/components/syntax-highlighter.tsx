@@ -60,7 +60,7 @@ const Figure = styled.figure<{ marginTop?: string }>`
 
     margin: 24px 0 0 !important; // Remove default setting
     padding: 56px !important;
-    max-width: 740px !important;
+    max-width: 800px !important;
 
     @media all and (max-width: ${mediaBreakPoint.first}) {
       margin: 16px 0 0 !important; // Remove default setting

@@ -17,14 +17,14 @@ const List = ({
 }) => {
   return (
     <Li>
-      <LargeTitle text="Stagger Animation" color="--gray8" />
+      <LargeTitle text="Stagger Motion" color="--gray8" />
       <Title3
         text="This is subtitle test text for hierarchy"
         color="--gray5"
         marginTop="12px"
       />
       <Body1
-        text="This website is for sharing interaction design with our team. Below is stagger animation example. You can refer code or copy(developing in progress). This paragraph design will imporve after tuning letter spacing and line height."
+        text="This website is for sharing interaction design with our team. Below is stagger motion example. You can refer code or copy(developing in progress). This paragraph design will imporve after tuning letter spacing and line height."
         color="--gray7"
         marginTop="48px"
       />
@@ -41,5 +41,5 @@ const List = ({
 export default List;
 
 const Li = styled.li`
-  max-width: 740px;
+  max-width: 800px;
 `;

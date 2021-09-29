@@ -79,7 +79,7 @@ const StaggerFigure = styled(motion.figure)`
 
   margin: 36px 0 0;
   padding: 56px 56px 36px;
-  max-width: 740px;
+  max-width: 800px;
 
   @media all and (max-width: ${mediaBreakPoint.first}) {
     margin: 36px 0 0;
@@ -90,7 +90,7 @@ const StaggerFigure = styled(motion.figure)`
 
 const MotionButton = styled(motion.button)`
   background-color: var(--primary);
-  padding: 24px;
+  padding: 22px;
   margin: 0 auto;
   display: flex;
   margin-top: 56px;
