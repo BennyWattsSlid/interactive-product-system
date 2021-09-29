@@ -40,12 +40,12 @@ const Body1 = ({
         desktop: '17px',
         mobile: '17px',
       }}
-      // lineHeight={
-      //   lineHeight || {
-      //     desktop: '36px',
-      //     mobile: '30px',
-      //   }
-      // }
+      lineHeight={
+        lineHeight || {
+          desktop: '23px',
+          mobile: '23px',
+        }
+      }
       // letterSpacing={{
       //   desktop: '0px',
       //   mobile: '0px',

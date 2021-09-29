@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 import LargeTitle from '../foundation/typography/title/large-title';
 import Title3 from '../foundation/typography/title/title3';
 import Body1 from '../foundation/typography/body/body1';
@@ -23,7 +22,7 @@ const List = ({
       <Body1
         text="This website is for sharing interaction design with our team. Below is stagger motion example. You can refer code or copy(developing in progress). This paragraph design will imporve after tuning letter spacing and line height."
         color="--gray7"
-        marginTop="48px"
+        marginTop="36px"
       />
       {children}
       <SlidSyntaxHighlighter
