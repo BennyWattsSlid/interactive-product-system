@@ -17,7 +17,7 @@ const StaggerTypography = () => {
     >
       <LargeTitle //
         variants={smoothUp}
-        text="Display Inter English 34px Bold"
+        text="Large Title Inter English 34px Bold"
         color="--gray8"
       />
 
