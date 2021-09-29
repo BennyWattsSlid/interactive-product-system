@@ -20,7 +20,7 @@ const List = ({
         marginTop="12px"
       />
       <Body1
-        text="This website is for sharing interaction design with our team. Below is stagger motion example. You can refer code or copy(developing in progress). This paragraph design will imporve after tuning letter spacing and line height."
+        text="This website is for sharing interaction design with our team. Below is stagger motion example. You can refer or copy code. This paragraph design will imporve after tuning letter spacing and line height."
         color="--gray7"
         marginTop="36px"
       />
