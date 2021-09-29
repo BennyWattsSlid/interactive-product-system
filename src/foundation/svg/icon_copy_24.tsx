@@ -24,11 +24,11 @@ export default IconCopy24;
 
 const SVG = styled.svg`
   rect {
-    fill: var(--gray7);
+    fill: var(--gray8);
   }
 
   rect:nth-child(1) {
-    fill: var(--gray3);
+    fill: var(--gray5);
   }
 
   border-radius: 6px;
