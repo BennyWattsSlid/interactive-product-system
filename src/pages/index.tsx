@@ -125,7 +125,7 @@ const StaggerFigure = styled(motion.figure)\`
 
 const MotionButton = styled(motion.button)\`
   background-color: var(--primary);
-  padding: 24px;
+  padding: 22px;
   margin: 0 auto;
   display: flex;
   margin-top: 56px;
