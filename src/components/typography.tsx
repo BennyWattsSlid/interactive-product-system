@@ -1,53 +1,21 @@
-import type { NextPage } from 'next';
 import styled from 'styled-components';
-import List from '../components/list';
-import SlidSyntaxHighlighter from '../components/syntax-highlighter';
-import Typography from '../components/typography';
-
-const Home: NextPage = () => {
-  return (
-    <>
-      <Main>
-        <Ul>
-          {/* <Typography /> */}
-          <List codeString={codeString}>
-            <Typography />
-          </List>
-        </Ul>
-      </Main>
-    </>
-  );
-};
-
-export default Home;
-
-const Main = styled.main`
-  display: flex;
-  justify-content: center;
-  margin: 72px auto 144px;
-
-  /* width: 100%; */
-`;
-
-const Ul = styled.ul`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 640px;
-  max-width: 840px;
-`;
-
-const codeString = `import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import LargeTitle from '../foundation/typography/title/large-title';
+import { smoothUp, stagger } from '../foundation/framer-motion/variants';
+import Title1 from '../foundation/typography/title/title1';
+import Title2 from '../foundation/typography/title/title2';
+import Title3 from '../foundation/typography/title/title3';
+import Body1 from '../foundation/typography/body/body1';
+import { mediaBreakPoint } from '../styles/common';
 
-const StaggerExample = () => {
+const StaggerTypography = () => {
   return (
-    <StaggerFigure
+    <StaggerFigure //
       variants={stagger}
       initial="initial"
       animate="animate"
     >
-      <LargeTitle
+      <LargeTitle //
         variants={smoothUp}
         text="Display Inter English 34px Bold"
         color="--gray8"
@@ -84,9 +52,9 @@ const StaggerExample = () => {
   );
 };
 
-export default StaggerExample;
+export default StaggerTypography;
 
-const StaggerFigure = styled(motion.figure)\`
+const StaggerFigure = styled(motion.figure)`
   background-color: var(--gray1);
   border-radius: 16px;
 
@@ -94,9 +62,9 @@ const StaggerFigure = styled(motion.figure)\`
   padding: 56px;
   max-width: 740px;
 
-  @media all and (max-width: \${mediaBreakPoint.first}) {
+  @media all and (max-width: ${mediaBreakPoint.first}) {
     margin: 36px 0 0;
     padding: 36px;
     max-width: 91vw;
   }
-\`;`;
+`;

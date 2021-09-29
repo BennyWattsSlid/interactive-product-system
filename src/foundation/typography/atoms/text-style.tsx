@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { mediaBreakPoint } from '../../../styles/common';
 
@@ -12,6 +13,9 @@ const TextStyle = ({
   marginTop,
   opacity,
   className,
+  variants,
+  initial,
+  animate,
 }: {
   type: any;
   text: string;
@@ -21,41 +25,73 @@ const TextStyle = ({
     desktop: string;
     mobile: string;
   };
-  lineHeight: {
-    desktop: string;
-    mobile: string;
+  lineHeight?: {
+    desktop?: string;
+    mobile?: string;
   };
-  letterSpacing: {
-    desktop: string;
-    mobile: string;
+  letterSpacing?: {
+    desktop?: string;
+    mobile?: string;
   };
   marginTop?: string;
   opacity?: number;
   className?: string;
+  variants?: any;
+  initial?: string;
+  animate?: string;
 }) => {
-  return (
-    <Text
-      as={type} // HTML 태그 결정
-      textColor={color}
-      weight={weight}
-      desktopFontSize={textSize.desktop}
-      mobileFontSize={textSize.mobile}
-      desktopLineHeight={lineHeight.desktop}
-      mobileLineHeight={lineHeight.mobile}
-      desktopLetterSpacing={letterSpacing.desktop}
-      mobileLetterSpacing={letterSpacing.mobile}
-      marginTop={marginTop}
-      opacity={opacity}
-      className={className}
-    >
-      {text}
-    </Text>
-  );
+  // console.log(variants, initial, animate);
+
+  if (!variants) {
+    return (
+      <>
+        <Text
+          as={type}
+          textColor={color}
+          weight={weight}
+          desktopFontSize={textSize.desktop}
+          mobileFontSize={textSize.mobile}
+          desktopLineHeight={lineHeight?.desktop}
+          mobileLineHeight={lineHeight?.mobile}
+          desktopLetterSpacing={letterSpacing?.desktop}
+          mobileLetterSpacing={letterSpacing?.mobile}
+          marginTop={marginTop}
+          opacity={opacity}
+          className={className}
+        >
+          {text}
+        </Text>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <motion.div variants={variants} initial={initial} animate={animate}>
+          <Text
+            as={type}
+            textColor={color}
+            weight={weight}
+            desktopFontSize={textSize.desktop}
+            mobileFontSize={textSize.mobile}
+            desktopLineHeight={lineHeight?.desktop}
+            mobileLineHeight={lineHeight?.mobile}
+            desktopLetterSpacing={letterSpacing?.desktop}
+            mobileLetterSpacing={letterSpacing?.mobile}
+            marginTop={marginTop}
+            opacity={opacity}
+            className={className}
+          >
+            {text}
+          </Text>
+        </motion.div>
+      </>
+    );
+  }
 };
 
 export default TextStyle;
 
-const Text = styled.p<TextType>`
+const Text = styled(motion.p)<TextType>`
   color: var(${({ textColor }) => textColor});
   font-weight: ${({ weight }) => weight};
   //
@@ -78,10 +114,10 @@ type TextType = {
   weight: number;
   desktopFontSize: string;
   mobileFontSize: string;
-  desktopLineHeight: string;
-  mobileLineHeight: string;
-  desktopLetterSpacing: string;
-  mobileLetterSpacing: string;
+  desktopLineHeight?: string;
+  mobileLineHeight?: string;
+  desktopLetterSpacing?: string;
+  mobileLetterSpacing?: string;
   marginTop?: string;
   opacity?: number;
 };

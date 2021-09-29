@@ -76,7 +76,7 @@ export const stagger = {
   },
 };
 
-export const listUp = {
+export const smoothUp = {
   initial: {
     scale: 1.05,
     y: 30,

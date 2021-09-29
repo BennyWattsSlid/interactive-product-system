@@ -11,19 +11,22 @@ import {
 import { useSetLanguage } from '../lib/hooks/useSetLanguage';
 import PMedium from '../foundation/typography/p-medium';
 import { tType } from '../../type';
+import { mediaBreakPoint } from '../styles/common';
 
 const SlidSyntaxHighlighter = ({
   language,
   codeString,
   caption,
+  marginTop,
 }: {
   language: 'tsx' | 'typescript' | 'jsx' | 'javascript' | 'css';
   codeString: tType;
   caption?: tType;
+  marginTop?: string;
 }) => {
   return (
     <>
-      <Figure>
+      <Figure marginTop={marginTop}>
         <SyntaxHighlighter
           language={language}
           style={vscDarkPlus}
@@ -48,16 +51,19 @@ const SlidSyntaxHighlighter = ({
 
 export default SlidSyntaxHighlighter;
 
-const Figure = styled.figure`
+const Figure = styled.figure<{ marginTop?: string }>`
+  /* margin-top: ${({ marginTop }) => marginTop}; */
+
   pre {
     background: rgb(30, 30, 30, 0.95) !important;
     border-radius: 16px;
 
-    margin: 48px 0 0 !important; // Remove default setting
+    margin: 24px 0 0 !important; // Remove default setting
     padding: 56px !important;
+    max-width: 740px !important;
 
-    @media all and (max-width: 1350px) {
-      margin: 36px 0 0 !important; // Remove default setting
+    @media all and (max-width: ${mediaBreakPoint.first}) {
+      margin: 16px 0 0 !important; // Remove default setting
       padding: 36px !important;
       max-width: 91vw !important;
     }
@@ -70,20 +76,8 @@ const Figure = styled.figure`
 
     font-size: 16px;
 
-    @media all and (max-width: 1350px) {
+    @media all and (max-width: ${mediaBreakPoint.first}) {
       font-size: 13px;
     }
   }
 `;
-
-// import 문제 해결
-// https://github.com/react-syntax-highlighter/react-syntax-highlighter/issues/230
-// Actually I found a better solution. You just need to use cjs module.
-// react-syntax-highlighter/dist/cjs/...
-// instead of:
-// react-syntax-highlighter/dist/esm/...
-
-// Demo
-// https://react-syntax-highlighter.github.io/react-syntax-highlighter/demo/prism.html
-
-// https://github.com/react-syntax-highlighter/react-syntax-highlighter/blob/HEAD/AVAILABLE_LANGUAGES_PRISM.MD
